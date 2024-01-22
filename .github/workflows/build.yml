@@ -30,7 +30,7 @@ jobs:
           node-version: 18
       
       - name: Set up node_modules cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         continue-on-error: false
         with:
           path: |
@@ -116,7 +116,7 @@ jobs:
           node-version: 18
 
       - name: Set up flatpak build cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         continue-on-error: false
         with:
           path: |
@@ -163,7 +163,7 @@ jobs:
         if: runner.os == 'Windows'
 
       - name: Set up vcpkg cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         continue-on-error: false
         with:
           path: |
@@ -179,7 +179,7 @@ jobs:
         if: runner.os == 'Windows'
 
       - name: Set up cargo cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         continue-on-error: false
         with:
           path: |
@@ -193,7 +193,7 @@ jobs:
           restore-keys: ${{ runner.os }}-${{ runner.arch }}-cargo-
 
       - name: Set up node_modules cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         continue-on-error: false
         with:
           path: |
